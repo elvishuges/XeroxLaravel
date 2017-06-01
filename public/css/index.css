@@ -1,0 +1,86 @@
+@font-face {
+  font-family: 'Material Icons';
+  font-style: normal;
+  font-weight: 400;
+  src: url(fonts/MaterialIcons-Regular.eot); /* For IE6-8 */
+  src: local('Material Icons'),
+  local('MaterialIcons-Regular'),
+  url(../fonts/MaterialIcons-Regular.woff2) format('woff2'),
+  url(../fonts/MaterialIcons-Regular.woff) format('woff'),
+  url(../fonts/MaterialIcons-Regular.ttf) format('truetype');
+}
+
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1 0 auto;
+}
+
+.material-icons {
+  font-family: 'Material Icons';
+  font-weight: normal;
+  font-style: normal;
+  font-size: 24px;  /* Preferred icon size */
+  display: inline-block;
+  line-height: 1;
+  text-transform: none;
+  letter-spacing: normal;
+  word-wrap: normal;
+  white-space: nowrap;
+  direction: ltr;
+
+  /* Support for all WebKit browsers. */
+  -webkit-font-smoothing: antialiased;
+  /* Support for Safari and Chrome. */
+  text-rendering: optimizeLegibility;
+
+  /* Support for Firefox. */
+  -moz-osx-font-smoothing: grayscale;
+
+  /* Support for IE. */
+  font-feature-settings: 'liga';
+}
+
+.fonte-pangolin{
+  font-family: 'Pangolin', cursive;
+}
+
+.fonte-fugaz{
+  font-family: 'Fugaz One', cursive;
+}
+
+.fonte-audiowide{
+  font-family: 'Audiowide', cursive;
+}
+
+.fonte-press{
+  font-family: 'Press Start 2P', cursive;
+}
+
+.fonte-freckle{
+  font-family: 'Freckle Face', cursive;
+}
+
+.font-indie{
+  font-family: 'Indie Flower', cursive;
+}
+
+.font-dacing{
+  font-family: 'Dancing Script', cursive;
+}
+
+.font-coming{
+  font-family: 'Coming Soon', cursive;
+}
+
+.negrito {
+ font-weight: bold;
+}
+
+.justificar{
+  text-align: justify;
+}
