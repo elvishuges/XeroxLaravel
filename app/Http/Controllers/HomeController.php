@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use Storage;
 use Arquivo;
 use Illuminate\Support\Facades\Hash;
+use App\Xerox;
 
 class HomeController extends Controller
 {
@@ -14,8 +15,12 @@ class HomeController extends Controller
      *
      * @return void
      */
-    public function __construct()
+
+    private $xerox;
+
+    public function __construct(Xerox $xerox)
     {
+       $this->xerox = $xerox;
         $this->middleware('auth');
     }
 
@@ -40,6 +45,16 @@ class HomeController extends Controller
     return view('minhasImpressoes');
    }
 
+    public function meusServisos()
+   {
+    return view('meusServicos');
+   }
+
+    public function criarServico()
+   {
+    return view('criarServico');
+   }
+
     public function postArquivo(Request $request)
    {
     //dd($request->all()); 
@@ -58,12 +73,20 @@ class HomeController extends Controller
 
     public static function getXerox()
     {
-      $xeroxes = \App\Xerox::paginate(1);
+      $xeroxes = \App\Xerox::paginate(3);
        // $xeroxescomp = compact('xeroxes');
        //  $xeroxes->paginate(3);
        return $xeroxes;
       
     }
+
+      public  function criarXerox(Request $request)
+    {
+       
+      dd($request->all()); 
+      //$xerox = $this->xerox->create($request->all());
+    }
+
 
 
 

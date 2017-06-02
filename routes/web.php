@@ -25,9 +25,15 @@ Route::get('/home',['as' =>'home','uses' =>'HomeController@index']);
 
 Route::get('minhasImpressoes', 'HomeController@minhasImpressoes')->middleware('auth');
 
+Route::get('meusServisos', 'HomeController@meusServisos')->middleware('auth');
+
+Route::get('criarServico', 'HomeController@criarServico')->middleware('auth');
+
 Route::get('perfilXerox/{id}', 'HomeController@perfilXerox')->middleware('auth');
 
 Route::post('postArquivo', 'HomeController@postArquivo')->middleware('auth');
+
+Route::post('criarXerox', 'HomeController@criarXerox')->middleware('auth');
 
 
 

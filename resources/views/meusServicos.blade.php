@@ -20,9 +20,9 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         
-                        <li class="active"><a href=criarServico><i class="material-icons left">home</i>Criar serviço</a></li>
+                        <li class="active"><a href="criarServico"><i class="material-icons left">home</i>Criar serviço</a></li>
                         <li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
-                         <li class="active"><a href="meusServisos"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
+                         <li class="active"><a href="meusServicos"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
                          <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -58,7 +58,7 @@
 
 		<div class="container center">
 			<div class="card-panel indigo z-depth-4">
-				<span class="white-text"><h4>Minhas Impressões</h4>
+				<span class="white-text"><h4>MEus Serviços</h4>
 				</span>
 			</div>
 			<br>
@@ -67,9 +67,9 @@
 			<table class="striped centered">
 				<thead>
 					<tr>
-						<th data-field="id">Xerox</th>
+						<th data-field="id">Nome Do Cliente</th>
 						<th data-field="name">Arquivo</th>
-						<th data-field="price">Status</th>
+						<th data-field="price">Horario De Busca</th>
 					</tr>
 				</thead>
 

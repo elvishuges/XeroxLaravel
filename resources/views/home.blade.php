@@ -20,7 +20,7 @@
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         
-                        <li class="active"><a href="{{ url('minhasImpressoes') }}"><i class="material-icons left">home</i>Criar serviço</a></li>
+                        <li class="active"><a href="{{ url('criarServico') }}"><i class="material-icons left">home</i>Criar serviço</a></li>
                         <li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
                         <li class="active"><a href="index.html"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
                         <li>
@@ -42,13 +42,7 @@
             </nav>
         </div>
         
-        <ul class="side-nav" id="mobile-demo">
-            <li class="indigo darken-3"><a href="login.php" class="white-text"><i class="material-icons right white-text">account_circle</i>Entrar</a></li>
-            <li class="active indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Início</a></li>
-            <li class="indigo darken-3"><a href="cadastrar.php" class="white-text"><i class="material-icons left white-text">person_add</i>Criar conta</a></li>
-            <li class="indigo darken-3"><a href="minhasImpressoes.php" class="white-text"><i class="material-icons left white-text">description</i>Minhas Impressões</a></li>
-            <li class="indigo darken-3"><a href="sobre.php" class="white-text"><i class="material-icons left white-text">info</i>Sobre</a></li>
-        </ul>
+      
         
         <div class="fullscreen">
             <div class="slider">
@@ -96,9 +90,7 @@ $xeroxes = App\Http\Controllers\HomeController::getXerox();
              @foreach( $xeroxes  as $xerox)
                   <div class="col s12 m4">
                     <a href="{{ url('/perfilXerox',['id'=>$xerox->id]) }}">
-                     <div class="card-content black-text">
-                              <h4 class="blue-text center">{{ $xerox->nome }}</h4>
-                            </div>
+                     
                         <div class="card">
                             <div class="card-image">
                                 <img src="css/xerox2.png">
@@ -109,7 +101,7 @@ $xeroxes = App\Http\Controllers\HomeController::getXerox();
                                 </p>
                             </div>
                             <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar</a>
+                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar Arquivo</a>
                             </div>
                         </div>
                     </a>

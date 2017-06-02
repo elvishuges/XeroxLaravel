@@ -116,25 +116,7 @@
                                 </p>
                             </div>
                             <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col s12 m4">
-                    <a href="perfil.php">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="css/xerox2.png">
-                                <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content black-text">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar</a>
+                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar Arquivo</a>
                             </div>
                         </div>
                     </a>
@@ -157,62 +139,27 @@
                         </div>
                     </a>
                 </div>
+                <div class="col s12 m4">
+                    <a href="perfil.php">
+                        <div class="card">
+                            <div class="card-image">
+                                <img src="css/xerox2.png">
+                                <span class="card-title">Card Title</span>
+                            </div>
+                            <div class="card-content black-text">
+                                <p>testessssssssssssssss
+                                </p>
+                            </div>
+                            <div class="card-action center">
+                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar Arquivo</a>
+                            </div>
+                        </div>
+                    </a>
+                </div>
             </div>
-            <div class="row">
-                <div class="col s12 m4">
-                    <a href="perfil.php">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="css/xerox2.png">
-                                <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content black-text">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col s12 m4">
-                    <a href="perfil.php">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="css/xerox2.png">
-                                <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content black-text">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col s12 m4">
-                    <a href="perfil.php">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="css/xerox2.png">
-                                <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content black-text">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+          
+                
+              
             </div>
         </div>
 
