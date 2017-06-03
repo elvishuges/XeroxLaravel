@@ -83,8 +83,8 @@ class HomeController extends Controller
       public  function criarXerox(Request $request)
     {
        
-      dd($request->all()); 
-      //$xerox = $this->xerox->create($request->all());
+      //dd($request->all()); 
+      $xerox = $this->xerox->create($request->all());
     }
 
 

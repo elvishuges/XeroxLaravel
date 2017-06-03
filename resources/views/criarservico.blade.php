@@ -70,11 +70,11 @@
 
 
 						<div class="input-field col s12 m6">
-							<input type="number" step="0.01" name="preco" required>
+							<input type="number" step="0.01" name="precoFolha" required>
 							<label class="active" for="first_name2">Preço/folha em R$ </label>
 						</div>
 					</div>
-
+<input type="hidden" id="user_id" name="user_id" value= "{{ Auth::user()->id }}" >
 					<div class="row">
 						<div class="input-field col s12">
 							<textarea name="descricao" id="textarea1" class="materialize-textarea" required></textarea>
@@ -82,7 +82,7 @@
 						</div>
 					</div>
 					<div  class="row center">
-						<button class="btn waves-effect waves-light" type="submit" name="action">Submit
+						<button class="btn waves-effect waves-light" type="submit" name="action">Criar
 							<i class="material-icons right">send</i>
 						</button>
 					</div>

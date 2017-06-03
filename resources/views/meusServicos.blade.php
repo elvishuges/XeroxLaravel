@@ -58,7 +58,7 @@
 
 		<div class="container center">
 			<div class="card-panel indigo z-depth-4">
-				<span class="white-text"><h4>MEus Serviços</h4>
+				<span class="white-text"><h4>Meus Serviços</h4>
 				</span>
 			</div>
 			<br>
