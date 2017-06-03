@@ -59,8 +59,8 @@
 		</div>
 		<div class="row">
 			<div class="container">
-	<form class="col s12"   method="POST"  action="{{ url('criarXerox') }}">
-  {{ csrf_field() }}
+				<form class="col s12"   method="POST"  action="{{ url('criarXerox') }}">
+					{{ csrf_field() }}
 					<div class="row">
 						<div class="input-field col s12 m6">
 							<input value="" id="nome" type="text" name="nome" class="validate" required>
@@ -74,7 +74,7 @@
 							<label class="active" for="first_name2">Preço/folha em R$ </label>
 						</div>
 					</div>
-<input type="hidden" id="user_id" name="user_id" value= "{{ Auth::user()->id }}" >
+					<input type="hidden" id="user_id" name="user_id" value= "{{ Auth::user()->id }}" >
 					<div class="row">
 						<div class="input-field col s12">
 							<textarea name="descricao" id="textarea1" class="materialize-textarea" required></textarea>
