@@ -16,13 +16,13 @@
             <nav class="indigo darken-3">
                 <div class="nav-wrapper container">
                     @if (Auth::check())
-                    <a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+                    <a href="/" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         
-                        <li class="active"><a href="{{ url('criarServico') }}"><i class="material-icons left">home</i>Criar serviço</a></li>
-                        <li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
-                        <li class="active"><a href="index.html"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
+                        <li class="active"><a href="{{ url('criarServico') }}"><i class="material-icons left">note_add</i> Criar serviço</a></li>
+                        <li class="active"><a href="minhasImpressoes"><i class="material-icons left">supervisor_account</i>Minhas Impressões</a></li>
+                        <li class="active"><a href="{{ url('meusServicos') }}"><i class="material-icons left">swap_vertical_circle </i>Meus Servicos</a></li>
                         <li>
                             <a href="{{ route('logout') }}"
                             onclick="event.preventDefault();
@@ -73,6 +73,14 @@
                 </ul>
             </div>
         </div>
+
+         <ul class="side-nav" id="mobile-demo">
+            <li class="indigo darken-3"><a href="login.php" class="white-text"><i class="material-icons right white-text">account_circle</i>Entrar </a></li>
+            <li class="active indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Início</a></li>
+            <li class="indigo darken-3"><a href="cadastrar.php" class="white-text"><i class="material-icons left white-text">person_add</i>Criar conta</a></li>
+            <li class="indigo darken-3"><a href="minhasImpressoes.php" class="white-text"><i class="material-icons left white-text">description</i>Minhas Impressões</a></li>
+            <li class="indigo darken-3"><a href="sobre.php" class="white-text"><i class="material-icons left white-text">info</i>Sobre</a></li>
+        </ul>
         
         <br>
 

@@ -93,11 +93,11 @@
 						<td class="green-text">03/06/2017</td>
 						<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
 						</td>
-						<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Submit
-						<i class="mdi-content-send right"></i>
+						<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Excluir
+							<i class="mdi-content-send right"></i>
 						</button>						
-					    </td>
-				
+					</td>
+
 				</tr>
 				<tr>
 					<td>Fulano  2</td>
@@ -105,29 +105,29 @@
 					<td class="red-text">03/06/2017</td>
 					<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
 					</button>
-					</td>
-					<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Submit
-						<i class="mdi-content-send right"></i>
-					</button></td>
+				</td>
+				<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Excluir 
+					<i class="mdi-content-send right"></i>
+				</button></td>
 
-			    
+
 			</tr>
 			<tr>
-					<td>Fulano  2</td>
-					<td>Arquivo 2</td>
-					<td class="red-text">03/06/2017</td>
-					<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
-					</button>
-					</td>
-					<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Submit
-						<i class="mdi-content-send right"></i>
-					</button>
-					</td>
+				<td>Fulano  2</td>
+				<td>Arquivo 2</td>
+				<td class="red-text">03/06/2017</td>
+				<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
+				</button>
+			</td>
+			<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Excluir
+				<i class="mdi-content-send right"></i>
+			</button>
+		</td>
 
-			    
-			</tr>
-		</tbody>
-	</table>
+
+	</tr>
+</tbody>
+</table>
 </div>
 
 <br><br><br><br>

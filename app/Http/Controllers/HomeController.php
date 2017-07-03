@@ -20,9 +20,9 @@ class HomeController extends Controller
 
     public function __construct(Xerox $xerox)
     {
-       $this->xerox = $xerox;
-        $this->middleware('auth');
-    }
+     $this->xerox = $xerox;
+     $this->middleware('auth');
+   }
 
     /**
      * Show the application dashboard.
@@ -31,58 +31,58 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+      return view('home');
     }
 
-   public function perfilXerox($id)
+    public function perfilXerox($id)
     {
-        $xerox = \App\Xerox::find($id);        
-       return view('perfilXerox',compact('xerox'));
-   }
+      $xerox = \App\Xerox::find($id);        
+      return view('perfilXerox',compact('xerox'));
+    }
 
-   public function minhasImpressoes()
-   {
-    return view('minhasImpressoes');
-   }
+    public function minhasImpressoes()
+    {
+      return view('minhasImpressoes');
+    }
 
-    public function meusServisos()
-   {
-    return view('meusServicos');
-   }
+    public function meusServicos()
+    {
+      return view('meusServicos');
+    }
 
     public function criarServico()
-   {
-    return view('criarServico');
-   }
+    {
+      return view('criarServico');
+    }
 
     public function postArquivo(Request $request)
-   {
+    {
     //dd($request->all()); 
-    $arquivo = $request->file('arquivo');
-    $nomeArquivo = $arquivo->getClientOriginalName();
-    $hash = Hash::make('test');
+      $arquivo = $request->file('arquivo');
+      $nomeArquivo = $arquivo->getClientOriginalName();
+      $hash = Hash::make('test');
 
 
     //Storage::disk('local')->put($nomeArquivo,file_get_contents($arquivo->getRealPath()));
     //$dataBusca = $request->input('dataBusca');
-    echo $hash;
+      echo $hash;
     //return redirect()->route('home');  
       //return $hash;
     //return view('postArquivo');
-   }
+    }
 
     public static function getXerox()
     {
       $xeroxes = \App\Xerox::paginate(3);
        // $xeroxescomp = compact('xeroxes');
        //  $xeroxes->paginate(3);
-       return $xeroxes;
+      return $xeroxes;
       
     }
 
-      public  function criarXerox(Request $request)
+    public  function criarXerox(Request $request)
     {
-       
+     
       //dd($request->all()); 
       $xerox = $this->xerox->create($request->all());
     }
@@ -90,4 +90,4 @@ class HomeController extends Controller
 
 
 
-}
+  }

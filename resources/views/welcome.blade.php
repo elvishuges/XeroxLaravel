@@ -16,13 +16,13 @@
             <nav class="indigo darken-3">
                 <div class="nav-wrapper container">
                 @if (Auth::check())
-                     <a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+                     <a href="/" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         
-                        <li class="active"><a href="index.html"><i class="material-icons left">home</i>Criar serviço</a></li>
+                        <li class="active"><a href="{{ url('criarServico') }}"><i class="material-icons left">home</i>Criar serviço</a></li>
                         <li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
-                         <li class="active"><a href="index.html"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
+                         <li class="active"><a href="meusServicos"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
                          <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();
@@ -68,6 +68,29 @@
         </ul>
         @if (Auth::check())
 
+        <div class="fullscreen">
+            <div class="slider">
+                <ul class="slides">
+                    <li>
+                        <img src="css/papel.jpg"> <!-- random image -->
+                        <div class="caption center-align">
+                            <h1 class="black-text font-coming">Quer imprimir um arquivo facilmente?</h1>
+                            <a class="waves-effect waves-light btn-large indigo darken-3" href="#">PESQUISAR</a>
+                        </div>
+                    </li>
+                    <li>
+                        <img src="css/papel.jpg"> <!-- random image -->
+                        <div class="caption left-align center">
+                            <h2 class="black-text font-coming">Não sabe como enviar o arquivo e não quer perder horas esperando?</h2>
+                            <a class="waves-effect waves-light btn-large indigo darken-3" href="#">PESQUISAR</a>
+                        </div>
+                    </li>
+                   
+                </ul>
+            </div>
+        </div>
+
+
         @else
         <div class="fullscreen">
             <div class="slider">
@@ -98,21 +121,29 @@
                 </ul>
             </div>
         </div>
+
+
   @endif
+
+          <?php 
+$xeroxes = App\Http\Controllers\HomeController::getXerox();
+
+?>
         <br>
+          <div class="container">
 
-        <div class="container">
             <div class="row">
-                <div class="col s12 m4">
-                    <a href="perfil.php">
+             @foreach( $xeroxes  as $xerox)
+                  <div class="col s12 m4">
+                    <a href="{{ url('/perfilXerox',['id'=>$xerox->id]) }}">
+                     
                         <div class="card">
                             <div class="card-image">
                                 <img src="css/xerox2.png">
                                 <span class="card-title">Card Title</span>
                             </div>
                             <div class="card-content black-text">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
+                                <p>{{ $xerox->descricao }}
                                 </p>
                             </div>
                             <div class="card-action center">
@@ -121,48 +152,13 @@
                         </div>
                     </a>
                 </div>
-                <div class="col s12 m4">
-                    <a href="perfil.php">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="css/xerox2.png">
-                                <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content black-text">
-                                <p>I am a very simple card. I am good at containing small bits of information.
-                                    I am convenient because I require little markup to use effectively.
-                                </p>
-                            </div>
-                            <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar Arquivo</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="col s12 m4">
-                    <a href="perfil.php">
-                        <div class="card">
-                            <div class="card-image">
-                                <img src="css/xerox2.png">
-                                <span class="card-title">Card Title</span>
-                            </div>
-                            <div class="card-content black-text">
-                                <p>testessssssssssssssss
-                                </p>
-                            </div>
-                            <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar Arquivo</a>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-            </div>
+            @endforeach          
           
-                
-              
+        
             </div>
+      
         </div>
-
+       
         <br>
 
         <ul class="pagination center">

@@ -22,7 +22,7 @@
                         
                         <li class="active"><a href=criarServico><i class="material-icons left">home</i>Criar serviço</a></li>
                         <li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
-                         <li class="active"><a href="meusServisos"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
+                         <li class="active"><a href="meusServicos"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
                          <li>
                                         <a href="{{ route('logout') }}"
                                             onclick="event.preventDefault();

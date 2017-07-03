@@ -25,7 +25,7 @@ Route::get('/home',['as' =>'home','uses' =>'HomeController@index']);
 
 Route::get('minhasImpressoes', 'HomeController@minhasImpressoes')->middleware('auth');
 
-Route::get('meusServisos', 'HomeController@meusServisos')->middleware('auth');
+Route::get('meusServicos', 'HomeController@meusServicos')->middleware('auth');
 
 Route::get('criarServico', 'HomeController@criarServico')->middleware('auth');
 

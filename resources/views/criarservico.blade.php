@@ -22,7 +22,7 @@
 
 						<li class="active"><a href="{{ url('criarServico') }}"><i class="material-icons left">home</i>Criar serviço</a></li>
 						<li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
-						<li class="active"><a href="meusServisos"><i class="material-icons left">home</i>Meus Serviços</a></li>
+						<li class="active"><a href="meusServicos"><i class="material-icons left">home</i>Meus Serviços</a></li>
 						<li>
 							<a href="{{ route('logout') }}"
 							onclick="event.preventDefault();
@@ -95,7 +95,26 @@
 		<br><br><br><br>
 
 
+<ul class="side-nav" id="mobile-demo">
+			<li class="indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Criar serviço</a></li>
+			<li class="indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Minhas Impressões</a></li>
+			<li class="active indigo darken-3"><a href="cadastrar.php" class="white-text"><i class="material-icons left white-text">person_add</i>Meus Serviços</a></li>
+		
+		<li class="active indigo darken-3" >
+							<a href="{{ route('logout') }}"
+							onclick="event.preventDefault();
+							document.getElementById('logout-form').submit();"  class="white-text">
+							Sair
+							<i class="material-icons right">account_circle</i>
+						</a>
 
+						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+							{{ csrf_field() }}
+						</form>
+					</li>
+			
+			
+		</ul>
 
 
 
