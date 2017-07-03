@@ -95,73 +95,73 @@
 		<br><br><br><br>
 
 
-<ul class="side-nav" id="mobile-demo">
-			<li class="indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Criar serviço</a></li>
-			<li class="indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Minhas Impressões</a></li>
-			<li class="active indigo darken-3"><a href="cadastrar.php" class="white-text"><i class="material-icons left white-text">person_add</i>Meus Serviços</a></li>
+			<ul class="side-nav" id="mobile-demo">
+			<li class="indigo darken-3"><a href="criarServico" class="white-text"><i class="material-icons left white-text">home</i>Criar serviço</a></li>
+			<li class="indigo darken-3"><a href="minhasImpressoes" class="white-text"><i class="material-icons left white-text">home</i>Minhas Impressões</a></li>
+			<li class="active indigo darken-3"><a href="meusServicos" class="white-text"><i class="material-icons left white-text">person_add</i>Meus Serviços</a></li>
+			
+			<li class="active indigo darken-3" >
+				<a href="{{ route('logout') }}"
+				onclick="event.preventDefault();
+				document.getElementById('logout-form').submit();"  class="white-text">
+				Sair
+				<i class="material-icons right">account_circle</i>
+			</a>
+
+			<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+				{{ csrf_field() }}
+			</form>
+		</li>
 		
-		<li class="active indigo darken-3" >
-							<a href="{{ route('logout') }}"
-							onclick="event.preventDefault();
-							document.getElementById('logout-form').submit();"  class="white-text">
-							Sair
-							<i class="material-icons right">account_circle</i>
-						</a>
+		
+	</ul>
 
-						<form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
-							{{ csrf_field() }}
-						</form>
+
+
+
+
+
+
+
+</main>
+<footer class="page-footer indigo darken-3">
+	<div class="container">
+		<div class="row">
+			<div class="col l6 s12">
+				<h5 class="white-text fonte-pangolin">Contato</h5>
+				<br>
+				<a class="grey-text text-lighten-3" href="#!"><i class="material-icons left white-text">email</i>Envie um email para contato</a>
+			</div>
+			<div class="col l4 offset-l2 s12">
+				<h5 class="white-text fonte-pangolin">Redes Sociais</h5>
+				<ul>
+					<li>
+						<a class="grey-text text-lighten-3" href="#!"><img src="css/facebook.png" width="40" height="40"></a>
 					</li>
-			
-			
-		</ul>
-
-
-
-
-
-
-
-
-	</main>
-	<footer class="page-footer indigo darken-3">
+				</ul>
+			</div>
+		</div>
+	</div>
+	<div class="footer-copyright">
 		<div class="container">
-			<div class="row">
-				<div class="col l6 s12">
-					<h5 class="white-text fonte-pangolin">Contato</h5>
-					<br>
-					<a class="grey-text text-lighten-3" href="#!"><i class="material-icons left white-text">email</i>Envie um email para contato</a>
-				</div>
-				<div class="col l4 offset-l2 s12">
-					<h5 class="white-text fonte-pangolin">Redes Sociais</h5>
-					<ul>
-						<li>
-							<a class="grey-text text-lighten-3" href="#!"><img src="css/facebook.png" width="40" height="40"></a>
-						</li>
-					</ul>
-				</div>
-			</div>
+			© 2017 Copyright Leandro Sampaio, All rights reserved
+			<a class="grey-text text-lighten-4 right" href="#!">Anuncie Conosco</a>
 		</div>
-		<div class="footer-copyright">
-			<div class="container">
-				© 2017 Copyright Leandro Sampaio, All rights reserved
-				<a class="grey-text text-lighten-4 right" href="#!">Anuncie Conosco</a>
-			</div>
-		</div>
-	</footer>
+	</div>
+</footer>
 
-	<!--Import jQuery before materialize.js-->
-	<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
-	<script type="text/javascript" src="js/materialize.js"></script>
-	<script type="text/javascript" src="js/materialize.min.js"></script>
-	<script>
-		$( document ).ready(function(){
-			$(".button-collapse").sideNav();
-			$('.tooltipped').tooltip({delay: 50});
-			$('.slider').slider();
-			$('.parallax').parallax();
-			$('.modal').modal();
-		});
-	</script>
+<!--Import jQuery before materialize.js-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script type="text/javascript" src="js/materialize.js"></script>
+<script type="text/javascript" src="js/materialize.min.js"></script>
+<script>
+	$( document ).ready(function(){
+		$(".button-collapse").sideNav();
+		$('.tooltipped').tooltip({delay: 50});
+		$('.slider').slider();
+		$('.parallax').parallax();
+		$('.modal').modal();
+	});
+</script>
 </body>
 </html>
