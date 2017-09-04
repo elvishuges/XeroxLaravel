@@ -15,10 +15,10 @@
         <div class="navbar-fixed">
             <nav class="indigo darken-3">
                 <div class="nav-wrapper container">
-                    <a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+                    <a href="{{ url('/') }}" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
-                        <li><a href="index.html"><i class="material-icons left">home</i>Início</a></li>
+                        <li><a href="{{ url('/') }}"><i class="material-icons left">home</i>Início</a></li>
                         <li class="active"><a  href="{{ route('register') }}"><i class="material-icons left">person_add</i>Criar conta</a></li>
                         <li><a href="{{ route('login') }}"><i class="material-icons right">account_circle</i>Entrar</a></li>
                         <li><a href="sobre.php">Sobre</a></li>
@@ -63,6 +63,9 @@
             <div class="row">
                 <form class="col s12 m12" method="POST" action="{{ route('register') }}">
                      {{ csrf_field() }}
+                     @if ($errors->any())
+        {{ implode('', $errors->all('<div>:message</div>')) }}
+@endif
 
                     <div class="row">
                         <div class="input-field col s6 m6">
@@ -93,7 +96,7 @@
                             <label for="password">Senha</label>
                         </div>
                         <div class="input-field col s6 m6">
-                            <input id="password" type="password" class="validate">
+                            <input id="password" name="password_confirmation" type="password" class="validate">
                             <label for="password">Confirmação de Senha</label>
                         </div>
                     </div>

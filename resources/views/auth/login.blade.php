@@ -16,7 +16,7 @@
         <div class="navbar-fixed">
             <nav class="indigo darken-3">
                 <div class="nav-wrapper container">
-                    <a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+                    <a href="{{ url('/') }}" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li><a href="{{ url('/') }}"><i class="material-icons left">home</i>Início</a></li>                        

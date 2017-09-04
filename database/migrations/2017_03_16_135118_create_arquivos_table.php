@@ -1,4 +1,4 @@
-<?php
+    <?php
 
 use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
@@ -15,13 +15,15 @@ class CreateArquivosTable extends Migration
     {
         Schema::create('arquivos', function (Blueprint $table) {
             $table->increments('id');
+            $table->boolean('status')->default(false);
             $table->string('nome');
+            $table->string('nomeXerox');
             $table->string('hash');
-            $table->date('dataDeBusca');
-            $table->integer('id_usuario');
-            $table->foreign('id_usuario')->references('id')->on('users');
-            $table->integer('id_xerox');
-            $table->foreign('id_xerox')->references('id')->on('xeroxes');
+            $table->string('dataDeBusca');
+            $table->integer('user_id');
+            $table->foreign('user_id')->references('id')->on('users');
+            $table->integer('xeroxes_id');
+            $table->foreign('xeroxes_id')->references('id')->on('xeroxes');
             $table->timestamps();
         });
     }

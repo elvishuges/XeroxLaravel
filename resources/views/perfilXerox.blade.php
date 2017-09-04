@@ -21,8 +21,9 @@
 					<ul class="right hide-on-med-and-down">
 
 						<li class="active"><a href="{{ url('criarServico') }}"><i class="material-icons left">home</i>Criar serviço</a></li>
-						<li class="active"><a href="minhasImpressoes"><i class="material-icons left">home</i>Minhas Impressões</a></li>
-						<li class="active"><a href="index.html"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
+						<li class="active"><a href="{{url('minhasImpressoes')}}"><i class="material-icons left">home</i>Minhas Impressões</a></li>
+						<li class="active"><a href="{{url('meusServicos')}}"><i class="material-icons left">home</i>Meus Serviçoes</a></li>
+
 						<li>
 							<a href="{{ route('logout') }}"
 							onclick="event.preventDefault();
@@ -104,9 +105,11 @@
 							</div>
 						</div>
 						<div class="input-field col s12 m12">
-							<input id="date" name="dataBusca" type="date" class="datepicker"  placeholder="Data ">	
+							<input id="date" name="dataDeBusca" type="date" class="datepicker"  placeholder="Data " required>	
 							<label for="email" data-error="wrong" data-success="right">Data de Busca:</label>
 						</div>
+						<input type="hidden" name="xeroxes_id" value= "{{$xerox->id}}" >
+						<input type="hidden" name="nomeXerox" value= "{{$xerox->nome}}" >
 					</form>
 				</div>
 				
@@ -177,8 +180,13 @@
 <script>
 function myFunction() {
     var x = document.forms["form"]["arquivo"].value;
-    if (x == "") {
+    var y = document.forms["form"]["dataDeBusca"].value;
+    if (x == "" ) {
         alert("Adicione um Arquivo para ser enviado");
+        return false;
+    }
+     if (y == "" ) {
+        alert("Adicione uma data de busca");
         return false;
     }
     document.getElementById('form').submit();

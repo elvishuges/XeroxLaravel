@@ -11,6 +11,7 @@
 	</style>
 </head>
 <body>
+ <!-- -->
 	<main>
 		<div class="navbar-fixed">
 			 <nav class="indigo darken-3">
@@ -76,9 +77,12 @@
 			</div>
 			<br>
 		</div>
+
+	
 		<div class="container">
 			<table class="striped centered">
 				<thead>
+
 					<tr>
 						<th data-field="id">Xerox</th>
 						<th data-field="name">Arquivo</th>
@@ -87,21 +91,15 @@
 				</thead>
 
 				<tbody>
+				 @foreach ($arquivos as $arquivo)				
 					<tr>
-						<td>Nome Xerox 1</td>
-						<td>Arquivo 1</td>
-						<td class="green-text">Incompleta</td>
+						<td>{{$arquivo->nomeXerox}}</td>
+						<td>{{$arquivo->nome}}</td>
+						<td class="green-text">{{$arquivo->status}}</td>
 					</tr>
-					<tr>
-						<td>Nome Xerox 2</td>
-						<td>Arquivo 2</td>
-						<td class="red-text">Concluída</td>
-					</tr>
-					<tr>
-						<td>Nome Xerox 3</td>
-						<td>Arquivo 3</td>
-						<td class="red-text">Concluída</td>
-					</tr>
+			   @endforeach  
+					
+				
 				</tbody>
 			</table>
 		</div>

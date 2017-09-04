@@ -95,7 +95,7 @@ $xeroxes = App\Http\Controllers\HomeController::getXerox();
         <div class="container">
 
             <div class="row">
-             @foreach( $xeroxes  as $xerox)
+             @foreach( $xeroxes  as $xerox) 
                   <div class="col s12 m4">
                     <a href="{{ url('/perfilXerox',['id'=>$xerox->id]) }}">
                      

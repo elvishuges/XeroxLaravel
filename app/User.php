@@ -4,6 +4,7 @@ namespace App;
 
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
+use App\Arquivo;
 
 class User extends Authenticatable
 {
@@ -27,7 +28,8 @@ class User extends Authenticatable
         'password', 'remember_token',
     ];
 
-    // protected $fillable = [
-      //  'nome', 'precoFolha', 'descricao','id_cidade',
-    //];
+     public function arquivos() // um usuario tem muitos arquivos
+    {
+           return $this->hasMany(Arquivo::class);
+    }
 }
