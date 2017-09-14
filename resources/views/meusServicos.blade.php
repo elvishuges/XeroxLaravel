@@ -16,7 +16,7 @@
 			<nav class="indigo darken-3">
 				<div class="nav-wrapper container">
 
-					<a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+					<a href="/home" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
 					<a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
 					<ul class="right hide-on-med-and-down">
 
@@ -76,17 +76,25 @@
 			<br>
 		</div>
 
-
-
+@foreach ($xeroxes as $xerox)
+	
+			   
 		<div class="container center">
 			<div class="col s12 m5">
 				<div class="card-panel green">
-					<span class="black-text">Nome Xerox 1
+					<span class="black-text">{{$xerox->nome}}
 					</span>
 				</div>
 				<br>
 			</div>
 		</div>
+		          <?php 
+$arquivos = App\Http\Controllers\HomeController::getArquivosDeXerox($xerox->id);
+
+?>
+
+
+
 		<div class="container center">
 			<table class="striped centered">
 				<thead>
@@ -100,48 +108,32 @@
 				</thead>
 
 				<tbody>
+@foreach ($arquivos as $arquivo)
 					<tr>
-						<td>Fulano 1</td>
-						<td>Arquivo 1</td>
-						<td class="green-text">03/06/2017</td>
-						<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
+						<td>{{$arquivo->nomeUsuario}}</td>
+						<td>{{$arquivo->nome}}</td>
+						<td class="green-text">{{$arquivo->dataDeBusca}}</td>
+						<td class="red-text"> <button class="btn waves-effect waves-light"  onclick="document.getElementById('{{$arquivo->id}}').submit(); return false;" name="action">Imprimir</button> 
 						</td>
-						<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Excluir
+						<form id="{{$arquivo->id}}" method="POST"  action="{{ url('baixarArquivo') }}"> {{ csrf_field() }}
+						 <input type="hidden" name="hashArquivo" value= "{{$arquivo->hash}}" > 
+						 <input type="hidden" name="mine" value= "{{$arquivo->mime}}" > 
+                         </form>
+                
+						<td colspan="" rowspan="" headers="">
+						<button class="btn waves-effect waves-light red"  name="action">Excluir
 							<i class="mdi-content-send right"></i>
 						</button>						
 					</td>
 
 				</tr>
-				<tr>
-					<td>Fulano  2</td>
-					<td>Arquivo 2</td>
-					<td class="red-text">03/06/2017</td>
-					<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
-					</button>
-				</td>
-				<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Excluir 
-					<i class="mdi-content-send right"></i>
-				</button></td>
-
-
-			</tr>
-			<tr>
-				<td>Fulano  2</td>
-				<td>Arquivo 2</td>
-				<td class="red-text">03/06/2017</td>
-				<td class="red-text"> <button class="btn waves-effect waves-light" type="submit" name="action">Imprimir
-				</button>
-			</td>
-			<td colspan="" rowspan="" headers=""><button class="btn waves-effect waves-light red" type="submit" name="action">Excluir
-				<i class="mdi-content-send right"></i>
-			</button>
-		</td>
-
-
-	</tr>
+		@endforeach 
 </tbody>
+
 </table>
 </div>
+ 
+ @endforeach 
 
 <br><br><br><br>
 

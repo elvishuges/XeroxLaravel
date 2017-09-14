@@ -17,7 +17,7 @@
 			 <nav class="indigo darken-3">
                 <div class="nav-wrapper container">
                 
-                    <a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+                    <a href="/home" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         
@@ -95,7 +95,11 @@
 					<tr>
 						<td>{{$arquivo->nomeXerox}}</td>
 						<td>{{$arquivo->nome}}</td>
-						<td class="green-text">{{$arquivo->status}}</td>
+						@if ($arquivo->status == 1 )
+						<td class="green-text">Imprimido!</td>
+						@else
+						<td class="red-text">Pendente</td>
+						@endif
 					</tr>
 			   @endforeach  
 					

@@ -10,5 +10,8 @@ class Xerox extends Model
         'descricao', 'precoFolha','nome','user_id'
     ];
 
-    
+      public function arquivos() // um usuario tem muitos arquivos
+    {
+           return $this->hasMany(Arquivo::class);
+    }
 }

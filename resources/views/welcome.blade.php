@@ -35,16 +35,21 @@
                                             {{ csrf_field() }}
                                         </form>
                                     </li>
+
+  
+
                     @else
                      
-                      <a href="index.html" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
+                      <a href="/home" class="brand-logo white-text fonte-fugaz" style="font-size: 40px;">XEROX</a>
                     <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
                     <ul class="right hide-on-med-and-down">
                         <li class="active"><a href="{{ url('/') }}"><i class="material-icons left">home</i>Início</a></li>
                         <li><a href="{{ route('login') }}"><i class="material-icons right">account_circle</i>Entrar</a></li>
-                        <li><a href="{{ url('register') }}"><i class="material-icons right">account_circle</i>Criat conta</a></li>                        
-                        <li><a href="sobre.php">Sobre</a></li>
+                        <li><a href="{{ url('register') }}"><i class="material-icons right">account_circle</i>Criar conta</a></li>                        
+                        <li><a href="/">Sobre</a></li>
                     </ul>
+                 
+
                     @endif
                 </div>
                 <div class="nav-wrapper">
@@ -59,14 +64,53 @@
             </nav>
         </div>
         
-        <ul class="side-nav" id="mobile-demo">
-            <li class="indigo darken-3"><a href="login.php" class="white-text"><i class="material-icons right white-text">account_circle</i>Entrar </a></li>
-            <li class="active indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Início</a></li>
-            <li class="indigo darken-3"><a href="cadastrar.php" class="white-text"><i class="material-icons left white-text">person_add</i>Criar conta</a></li>
-            <li class="indigo darken-3"><a href="minhasImpressoes.php" class="white-text"><i class="material-icons left white-text">description</i>Minhas Impressões</a></li>
-            <li class="indigo darken-3"><a href="sobre.php" class="white-text"><i class="material-icons left white-text">info</i>Sobre</a></li>
-        </ul>
+       
         @if (Auth::check())
+         <ul class="side-nav" id="mobile-demo">
+            <li class="indigo darken-3"><a href="criarServico" class="white-text"><i class="material-icons right white-text">account_circle</i>Criar serviçoes </a></li>
+            <li class="active indigo darken-3"><a href="minhasImpressoes" class="white-text"><i class="material-icons left white-text">home</i>Minhas impressões</a></li>
+            <li class="indigo darken-3"><a href="{{ url('register') }}"class="white-text"><i class="material-icons left white-text">person_add</i>Mesus serviçoes</a></li>
+            <li class="indigo darken-3"><a href="minhasImpressoes" class="white-text"><i class="material-icons left white-text">description</i>Minhas Impressões</a></li>
+            <li class="indigo darken-3"><a href="{{ route('logout') }}"  class="white-text"
+                                            onclick="event.preventDefault();
+                                                     document.getElementById('logout-form').submit();">
+                                            Sair
+                                            <i class="material-icons left white-text">account_circle</i>
+                                        </a>
+
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" style="display: none;">
+                                            {{ csrf_field() }}
+                                        </form></li>
+        </ul>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         <div class="fullscreen">
             <div class="slider">
@@ -92,6 +136,12 @@
 
 
         @else
+          <ul class="side-nav" id="mobile-demo">
+            <li class="indigo darken-3"><a href="{{ url('/') }}"class="white-text"><i class="material-icons right white-text">account_circle</i>Incio </a></li>
+            <li class="indigo darken-3"><a href="{{ url('login') }}"class="white-text"><i class="material-icons left white-text">person_add</i>Entrar</a></li>
+            <li class="indigo darken-3"><a  href="{{ url('register') }}" class="white-text"><i class="material-icons left white-text">description</i>Criar conta</a></li>
+            <li class="indigo darken-3"><a href="sobre.php" class="white-text"><i class="material-icons left white-text">info</i>Sobre </a></li>
+        </ul>
         <div class="fullscreen">
             <div class="slider">
                 <ul class="slides">
@@ -147,7 +197,7 @@ $xeroxes = App\Http\Controllers\HomeController::getXerox();
                                 </p>
                             </div>
                             <div class="card-action center">
-                                <a class="waves-effect waves-light btn" href="perfil.php">Enviar Arquivo</a>
+                                <a class="waves-effect waves-light btn" href="{{ url('/perfilXerox',['id'=>$xerox->id]) }}">Enviar Arquivo</a>
                             </div>
                         </div>
                     </a>

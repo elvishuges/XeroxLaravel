@@ -17,13 +17,15 @@ class CreateArquivosTable extends Migration
             $table->increments('id');
             $table->boolean('status')->default(false);
             $table->string('nome');
+            $table->string('mime');
             $table->string('nomeXerox');
+            $table->string('nomeUsuario');
             $table->string('hash');
             $table->string('dataDeBusca');
             $table->integer('user_id');
             $table->foreign('user_id')->references('id')->on('users');
-            $table->integer('xeroxes_id');
-            $table->foreign('xeroxes_id')->references('id')->on('xeroxes');
+            $table->integer('xerox_id');
+            $table->foreign('xeroxe_id')->references('id')->on('xeroxes');
             $table->timestamps();
         });
     }

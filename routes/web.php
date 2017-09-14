@@ -35,6 +35,8 @@ Route::post('postArquivo', 'HomeController@postArquivo')->middleware('auth');
 
 Route::post('criarXerox', 'HomeController@criarXerox')->middleware('auth');
 
+Route::post('baixarArquivo', 'HomeController@baixarArquivo')->middleware('auth');
+
 
 
 //Route::get('/cadastrar', 'XeroxController@cadastrar');

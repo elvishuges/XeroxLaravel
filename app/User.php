@@ -5,6 +5,7 @@ namespace App;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Foundation\Auth\User as Authenticatable;
 use App\Arquivo;
+use App\Xerox;
 
 class User extends Authenticatable
 {
@@ -31,5 +32,9 @@ class User extends Authenticatable
      public function arquivos() // um usuario tem muitos arquivos
     {
            return $this->hasMany(Arquivo::class);
+    }
+      public function xeroxes() // um usuario tem muitas xerox
+    {
+           return $this->hasMany(Xerox::class);
     }
 }

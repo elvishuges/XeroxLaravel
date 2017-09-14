@@ -76,9 +76,9 @@
 
          <ul class="side-nav" id="mobile-demo">
             <li class="indigo darken-3"><a href="login.php" class="white-text"><i class="material-icons right white-text">account_circle</i>Entrar </a></li>
-            <li class="active indigo darken-3"><a href="index.html" class="white-text"><i class="material-icons left white-text">home</i>Início</a></li>
-            <li class="indigo darken-3"><a href="cadastrar.php" class="white-text"><i class="material-icons left white-text">person_add</i>Criar conta</a></li>
-            <li class="indigo darken-3"><a href="minhasImpressoes.php" class="white-text"><i class="material-icons left white-text">description</i>Minhas Impressões</a></li>
+            <li class="active indigo darken-3"><a href="{{ route('login') }}" class="white-text"><i class="material-icons left white-text">home</i>Início</a></li>
+            <li class="indigo darken-3"><a href="{{ url('register') }}" class="white-text"><i class="material-icons left white-text">person_add</i>Criar conta</a></li>
+            <li class="indigo darken-3"><a href="minhasImpressoes" class="white-text"><i class="material-icons left white-text">description</i>Minhas Impressões</a></li>
             <li class="indigo darken-3"><a href="sobre.php" class="white-text"><i class="material-icons left white-text">info</i>Sobre</a></li>
         </ul>
         
